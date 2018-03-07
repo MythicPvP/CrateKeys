@@ -15,6 +15,7 @@ use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener{
+	
 	public function onEnable(){
 		$this->saveDefaultConfig();
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
@@ -29,8 +30,8 @@ class Main extends PluginBase implements Listener{
 		$this->getLogger(TextFormat::RED."Lmao Why You Got To Disable This Plugin It Is The Best Plugin Ever Made");
 	}
 	
-	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-		if(strtolower($command->getName()) == "cratekey"){
+	public function onCommand(CommandSender $sender, Command $cmd, String $label, array $args){
+		if(strtolower($cmd->getName()) == "cratekey"){
 			if($sender->hasPermission("cratekey") || $sender->hasPermission("cratekey.give")){
 				if($this->getConfig()->get("PlayerGive") == false && $sender instanceof Player){
 					$sender->sendMessage(TextFormat::RED."You don't have permission to use that command!");
