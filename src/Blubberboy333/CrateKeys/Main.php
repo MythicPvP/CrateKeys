@@ -26,7 +26,7 @@ class Main extends PluginBase implements Listener{
 	}
 	
 	public function onDisable(){
-		$this->getLogger(TextFormat::RED."Uh oh, CrateKeys was disabled!");
+		$this->getLogger(TextFormat::RED."Lmao Why You Got To Disable This Plugin It Is The Best Plugin Ever Made");
 	}
 	
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args){
