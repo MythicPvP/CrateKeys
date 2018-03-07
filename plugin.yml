@@ -1,6 +1,8 @@
 name: CrateKeys
 version: 0.0.1
-api: [2.0.0]
+api:
+- 3.0.0
+- 3.0.0-ALPHA11
 main: Blubberboy333\CrateKeys\Main
 commands:
     cratekey:
